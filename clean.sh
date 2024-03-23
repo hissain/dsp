@@ -17,4 +17,3 @@ find . -name CMakeLists.txt.user -type f -delete
 
 # Delete all Makefiles
 find . -name Makefile -type f -delete
-
