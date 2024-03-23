@@ -20,7 +20,8 @@ int main() {
 	printf("]\n");
 	
 	//test_fir();
-	test_fft();
+	//test_fft();
+	test_conv();
 
 	return 0;
 }

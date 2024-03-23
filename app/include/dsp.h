@@ -59,6 +59,7 @@ void print_array(float32_t *data, int size);
 
 int test_fir(void);
 int test_fft(void);
+int test_conv(void);
 
 
 #endif // DSP_H
