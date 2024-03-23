@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <dsp/basic_math_functions.h>
+#include "dsp.h"
 
 #define SZ 5
 
 int main() {
-	printf("Hello Math World!\n");
+	printf("Running from main() function\n");
 
 	float64_t A[SZ] = {1, 2, 3, 4, 5};
 	float64_t B[SZ] = {1, 2, 3, 4, 5};
@@ -17,6 +18,8 @@ int main() {
 		printf("%F ", C[i]);
 	}
 	printf("]\n");
+	
+	test_fir();
 
 	return 0;
 }
