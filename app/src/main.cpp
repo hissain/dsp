@@ -19,7 +19,8 @@ int main() {
 	}
 	printf("]\n");
 	
-	test_fir();
+	//test_fir();
+	test_fft();
 
 	return 0;
 }
