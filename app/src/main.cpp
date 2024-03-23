@@ -1,10 +1,22 @@
 #include <stdio.h>
-#include "Math.h"
+#include <dsp/basic_math_functions.h>
+
+#define SZ 5
 
 int main() {
 	printf("Hello Math World!\n");
-	printf("If a = 5 and b = 3, then,\n");
-	printf("add(a, b) returns %d\n", add(5, 3));
-	printf("sub(a, b) returns %d\n", sub(5, 3));
+
+	float64_t A[SZ] = {1, 2, 3, 4, 5};
+	float64_t B[SZ] = {1, 2, 3, 4, 5};
+	float64_t C[SZ];
+
+	arm_mult_f64(A, B, C, SZ);
+
+	printf("C = [");
+	for (int i = 0; i < SZ; i++){
+		printf("%F ", C[i]);
+	}
+	printf("]\n");
+
 	return 0;
 }

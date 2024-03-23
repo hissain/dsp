@@ -11,6 +11,5 @@ set(CMAKE_CXX_STANDARD 17)
 #add_subdirectory(lib)
 
 # Indicate that the library math uses the header files within the folder include.
-add_subdirectory(math)
 add_subdirectory(app)
 #add_subdirectory(cmsis)
