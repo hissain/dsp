@@ -1,4 +1,4 @@
-# CMSIS/DSP Demo App for Beginners
+## CMSIS/DSP Demo App for Beginners
 
 This C/C++ repository contains the following contents:
 
@@ -11,7 +11,7 @@ This C/C++ repository contains the following contents:
 To build the CMSIS DSP library, follow these steps:
 
 1. Navigate to the `cmsis` folder.
-2. Follow the build instructions provided within the folder to compile the CMSIS DSP library.
+2. Follow the CMakeList.txt to understand whats going on provided within the folder to compile the CMSIS DSP library.
 3. In most cases building this library using cmake wont require any further re-configurations.
 4. After building it produces static libCMSISDSP.a file which should be included in later demo app.
 
