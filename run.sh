@@ -13,4 +13,3 @@ if [ -f ./build/app/app ]; then
 else
     echo "Executable 'app'  not found. Make sure your build was successful."
 fi
-

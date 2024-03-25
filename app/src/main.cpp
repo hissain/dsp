@@ -20,8 +20,10 @@ int main() {
 	printf("]\n");
 	
 	//test_fir();
-	//test_fft();
-	test_conv();
+	test_fft();
+	//test_cfft();
+	//test_conv();
+	//test_butterworth_bandpass();
 
 	return 0;
 }
