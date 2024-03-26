@@ -18,10 +18,13 @@ int main() {
 		printf("%F ", C[i]);
 	}
 	printf("]\n");
-	
+
+	//test_generate_signal();
+
 	//test_fir();
-	test_fft();
+	//test_fft();
 	test_ifft();
+	//test_cfft();
 	//test_conv();
 	//test_butterworth_bandpass();
 
