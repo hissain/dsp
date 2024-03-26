@@ -90,6 +90,7 @@ int test_cfft(void) {
 int test_ifft(void) {
 
     //int FFT_LEN = 256;
+    //int FFT_LEN = 320;
     int FFT_LEN = 320;
 
     float32_t fftResult[2 * FFT_LEN];
@@ -99,7 +100,8 @@ int test_ifft(void) {
     float32_t fftResultImag[FFT_LEN];
 
     //float32_t* input = &input_15kHz_1kHz_50fs[0];
-    float32_t* input = &testInput_f32_1kHz_15kHz[0];
+    //float32_t* input = &testInput_f32_1kHz_15kHz[0];
+    float32_t *input = &input_15K_to_1K_50kHz[0];
 
     arm_cfft_instance_f32 S; // FFT instance structure
 
@@ -130,13 +132,17 @@ int test_ifft(void) {
     print_array(fftResultImag, FFT_LEN);
     printf("\n");
 
-    // Determine the index corresponding to the frequency to remove
-    // int frequencyToRemove = 1000; // Frequency to remove in Hz
-    // int indexToRemove = frequencyToRemove * FFT_LEN / 48000; // Assuming sampling frequency is 48 kHz
+    float32_t toRemove[] = {1000, 1700, 5000};
 
-    // // Zero out the frequency component in the FFT result
-    // fftResultReal[indexToRemove] = 0.0f;
-    // fftResultImag[indexToRemove] = 0.0f;
+    for (int i = 0; i < 3; i++){
+        // Determine the index corresponding to the frequency to remove
+        int frequencyToRemove = toRemove[i]; // Frequency to remove in Hz
+        int indexToRemove = frequencyToRemove * FFT_LEN / 48000; // Assuming sampling frequency is 48 kHz
+
+        // Zero out the frequency component in the FFT result
+        fftResult[indexToRemove] = 0.0f;
+        fftResult[indexToRemove + 1] = 0.0f;
+    }
 
     // Perform Inverse FFT/ IFFT
     arm_cfft_f32(&S, fftResult, 1, 1); // 2nd last param = 1 means inverse ifftFlag set
