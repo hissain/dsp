@@ -21,7 +21,7 @@ int main() {
 	
 	//test_fir();
 	test_fft();
-	//test_cfft();
+	test_ifft();
 	//test_conv();
 	//test_butterworth_bandpass();
 

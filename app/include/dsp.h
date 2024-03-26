@@ -60,7 +60,7 @@ void print_array(float32_t *data, int size);
 
 int test_fir(void);
 int test_fft(void);
-int test_cfft(void);
+int test_ifft(void);
 int test_conv(void);
 int test_butterworth_bandpass(void);
 
