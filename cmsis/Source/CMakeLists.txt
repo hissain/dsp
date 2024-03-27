@@ -62,6 +62,7 @@ include(WindowFunctions/Config.cmake)
 
 ### Includes
 target_include_directories(CMSISDSP PUBLIC "${DSP}/Include")
+target_include_directories(CMSISDSP PUBLIC "${DSP}/Include/core")
 if (DEFINED CMSISCORE)
 target_include_directories(CMSISDSP PUBLIC "${CMSISCORE}/Include")
 endif()
